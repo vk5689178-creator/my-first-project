@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAO Shopping</title>
+  <meta name="description" content="SAO Shopping - fashion, electronics, home and more at the best prices.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="logo">SAO<span>Shopping</span></a>
+      <div class="search">
+        <input id="search" type="search" placeholder="Search products..." aria-label="Search products">
+      </div>
+      <button id="cart-btn" class="cart-btn" aria-label="Open cart">
+        🛒 <span>Cart</span> <b id="cart-count">0</b>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="tag">Festive Sale is live</p>
+        <h1>Up to 50% off on everything you love</h1>
+        <p class="sub">Free delivery on orders above ₹499. Easy 7-day returns.</p>
+        <a href="#products" class="btn">Shop now</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🛍️</div>
+    </div>
+  </section>
+
+  <main class="container" id="products">
+    <nav class="categories" id="categories" aria-label="Categories"></nav>
+    <div class="list-head">
+      <h2 id="list-title">All products</h2>
+      <select id="sort" aria-label="Sort products">
+        <option value="default">Sort: Recommended</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="rating">Top rated</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No products found.</p>
+  </main>
+
+  <section class="perks">
+    <div class="container perks-inner">
+      <div><b>🚚 Free delivery</b><span>On orders above ₹499</span></div>
+      <div><b>↩️ Easy returns</b><span>7-day return policy</span></div>
+      <div><b>🔒 Secure payment</b><span>UPI, cards & COD</span></div>
+      <div><b>📞 24/7 support</b><span>We're here to help</span></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><b>SAO Shopping</b> · © <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your cart</h3>
+      <button id="close-cart" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-body" id="cart-items"></div>
+    <div class="drawer-foot">
+      <div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+      <div class="row"><span>Delivery</span><b id="delivery">₹0</b></div>
+      <div class="row total"><span>Total</span><b id="total">₹0</b></div>
+      <button class="btn full" id="checkout">Place order</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
